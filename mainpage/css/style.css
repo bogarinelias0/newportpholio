@@ -1,0 +1,283 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto';
+}
+.menu{
+    background-color: #fcfcfc;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 3px 5px rgb(0 0 0 / 10%);
+    padding: 35px 35px;
+}
+.name{
+    color: black;
+    font-size: 25px;
+    padding: 0 45px;
+    font-weight: bold;
+}
+.menu_items{
+    display: flex;
+    list-style: none;
+    margin-right: 30px;
+
+}
+.menu_items li{
+    border-radius: 3px;
+    margin:0 5px
+}
+.menu_items li a{
+    padding: 7px 13px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    text-transform: uppercase;
+    color: black;
+}
+.menu_items li:hover, li.active{
+    background-color: rgb(168, 166, 166);
+    transition: .8s;
+}
+.icon_menu{
+    margin-right: 30px;
+    font-size: 25px;
+    color: black;
+    cursor: pointer;
+    display: none;
+}
+ul.show{
+    top:65px
+}
+
+.about-me{
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-me img{
+    position: absolute;
+    width: 660px;
+    /* height: 320px; */
+    z-index: 100;
+    top: 180px;
+}
+.about-me p{
+    position: absolute;
+    padding: 40px 35px 0 40px;
+    height: 220px;
+    width: 500px;
+    top: 160px;
+    box-shadow: 1px 5px 12px 3px #9095c3;
+    text-align: center;
+    font-family: monospace;
+    font-size: 17px;
+}
+
+.text-more-about{
+    margin-top: 45%;
+    text-align: center;
+    background-color: #e5e5e5;
+    padding: 50px;
+}
+.text-more-about h2{
+    padding-bottom: 30px;
+}
+.text-more-about p{
+    font-size: 19px;
+    padding-bottom: 10px;
+    font-family: monospace;
+}
+.skills{
+    text-align: center;
+    padding: 50px;
+    margin: 30px 0 30px 0;
+
+}
+.skills article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.skills article img{
+    width: 250px;
+    padding: 15px;
+}
+.my-projects{
+    background-color: #e5e5e5;
+    padding: 40px;
+}
+.my-projects h2{
+    text-align: center;
+}
+.container-projects{
+    display: flex;
+    
+}
+.recent-projects{
+    padding: 15px;
+    margin: 45px 20px 50px 20px;
+    box-shadow: 0 3px 5px rgb(0 0 0 / 10%);
+    background-color: #fff;
+    text-align: center;
+    font-family: monospace;
+}
+.recent-projects img{
+    max-width: 250px;
+    padding-bottom: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mediaquerys */
+@media screen and (max-width:952px){
+    .name{
+        font-size: 18px;
+        padding-left: 35px;
+    }
+    .menu_items li a{
+        font-size: 16px;
+    }
+    .menu{
+        padding: 0;
+    }
+}
+@media screen  and (max-width:858px){
+    .menu{
+        height: 65px;
+        padding: 0;
+    }
+    .icon_menu{
+        display: inline-flex;
+    }
+    .menu_items{
+        position: absolute;
+        z-index: 10000;
+        height: calc(100% - 65px);
+        background: #000000;
+        padding-top: 45px;
+        top: -100vh;
+        text-align: center;
+        transition: all .8s;
+        flex-direction: column;
+    }
+    .menu_items li{
+        margin: 30px 0 0 0;
+        line-height: 30px;
+        width: 100vw;
+    }
+    .menu_items li:hover{
+        background: none;
+    }
+    .menu_items li a{
+        font-size: 20px;
+        color: #fcfcfc;
+    }
+    .name{
+        font-size: 14px;
+        padding-left: 35px;
+    }
+}
+@media screen and  (max-width:858px) and (orientation:landscape){
+    .menu_items li{
+        margin: 5px 0 0 0;
+    }
+    .menu_items{
+        height: calc(100% - 65px);
+    }
+    .menu{
+        padding: 0;
+    }
+}
+
+@media (min-width:350px){
+    .about-me img{
+        top:235px;
+        width: 315px;
+    }
+    .about-me p{
+        padding: 55px 20px 0 30px;
+        height: 250px;
+        width: 230px;
+        top: 100px;
+        position: relative;
+        font-size: 15px;
+    }
+    .skills{
+        padding: 0;
+    }
+    .skills article img{
+        width: 120px;
+        padding: 15px;
+    }
+    .skills h2{
+        padding: 30px;
+        font-family: "Roboto";
+    }
+    .container-projects{
+        flex-direction: column;
+    }
+    .recent-projects{
+        box-shadow: -6px 6px 7px 2px rgb(181 181 181);
+    }
+}
+@media (min-width:700px){
+    .about-me img{
+        top: 200px;
+        width: 450px;
+    }
+    .about-me p{
+        width: 325px;
+        font-size: 17px;
+        padding: 75px 20px 0 30px;
+    }
+    .skills{
+        padding: 50px;
+
+    }
+    .skills article img{
+        width: 200px;
+        padding: 0px;
+    }
+    .recent-projects img{
+        width: 150px;
+    }
+    .container-projects{
+        flex-direction: row;
+    }
+}
+@media (min-width:1024px){
+    .about-me img{
+        width: 650px;
+    }
+    .about-me p{
+        height: 230px;
+        width: 475px;
+        padding: 65px 20px 0 30px;
+        font-size: 20px;
+    }
+}
